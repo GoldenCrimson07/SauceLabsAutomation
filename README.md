@@ -32,7 +32,7 @@ This project uses the following dependencies (as defined in `pom.xml`):
 
 ### 2️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-repo/ui-automation.git
+git clone https://github.com/GoldenCrimson07/SauceLabsAutomation.git
 cd ui-automation
 ```
 
