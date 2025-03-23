@@ -65,12 +65,12 @@ target/cucumber-reports.html
 ## 🛠️ Project Structure
 ```
 UIAutomation/
-├── src/test/java/testcases/        # Cucumber Step Definitions
-├── src/test/resources/             # Feature Files (Gherkin)
-├── src/main/java/pages/            # Page Object Models (POM)
-├── src/test/java/runner/          # Test Runners
-├── pom.xml                          # Maven Configuration
-└── README.md                        # Project Documentation
+├── src/test/java/testcases/                                # Cucumber Step Definitions
+├── src/test/resources/                                     # Feature Files (Gherkin)
+├── src/main/java/org/uiautomation/PageObject               # Page Object Models (POM)
+├── src/test/java/runner/                                   # Test Runners
+├── pom.xml                                                 # Maven Configuration
+└── README.md                                               # Project Documentation
 ```
 
 ## 🔗 References
