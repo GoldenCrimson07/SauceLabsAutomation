@@ -78,6 +78,7 @@ UIAutomation/
 - [Selenium WebDriver](https://www.selenium.dev/documentation/)
 - [Cucumber](https://cucumber.io/docs/)
 - [TestNG](https://testng.org/doc/)
+- [Result](https://drive.google.com/file/d/1g2siGZwh28Y8Mj4FMQmmKCIg7AFDgiyZ/view?usp=sharing)
 
 ---
 
