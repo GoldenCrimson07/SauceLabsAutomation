@@ -18,6 +18,9 @@ public class CheckoutTest {
     CartPage cartPage;
     LoginPage loginPage;
     ShippmentPage shippmentPage;
+    CheckoutPage checkoutPage;
+    OrderReviewPage orderReviewPage;
+    PaymentResultPage paymentResultPage;
 
     public CheckoutTest() throws MalformedURLException {
         BaseDriver.setup();
@@ -28,6 +31,9 @@ public class CheckoutTest {
         cartPage = new CartPage(driver);
         loginPage = new LoginPage(driver);
         shippmentPage = new ShippmentPage(driver);
+        checkoutPage = new CheckoutPage(driver);
+        orderReviewPage = new OrderReviewPage(driver);
+        paymentResultPage = new PaymentResultPage(driver);
     }
 
     @Given("Launch App")
@@ -63,10 +69,26 @@ public class CheckoutTest {
     public void addBuyerDetails(){
         loginPage.loginAccount("wilton.pangestu@gmail.com","123456");
         shippmentPage.insertShipmentDetails("wilton","jl. testing no 123","","Jakarta","Jakarta","13411","Indonesia");
+        checkoutPage.addPaymentDetails("wilton","29182918121","1233","123");
+    }
+
+    @Then("User can see payment details")
+    public void checkShippingAddress(){
+        orderReviewPage.assertCheckoutData("wilton","29182918121","Exp: 12/33","jl. testing no 123");
+    }
+
+    @When("User places order")
+    public void placeOrder(){
+        orderReviewPage.clickReviewButton();
+    }
+
+    @Then("Success checkout page is displayed")
+    public void checkSuccessPage(){
+        paymentResultPage.assertSuccessPaymentResultPage();
     }
 //    Then User can see "2" products namely "Sauce Lab Back Packs" and total price at "$ 59.98" at cart page
 //    When User adds buyer details
-//    Then User can see shipping address with DHL service fee
+//    Then User can see shipping address
 //    When User places order
 //    Then Success checkout page is displayed
 

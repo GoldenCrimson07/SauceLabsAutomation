@@ -7,6 +7,6 @@ Feature: Checkout Functionality
     When User adds 2 items
     Then User can see 2 products namely "Sauce Lab Back Packs" and total price at "$ 59.98" at cart page
     When User adds buyer details
-    Then User can see shipping address with DHL service fee
+    Then User can see payment details
     When User places order
     Then Success checkout page is displayed

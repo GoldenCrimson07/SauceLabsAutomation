@@ -53,7 +53,6 @@ public class AppPage {
             try{
                 Thread.sleep(1000);
                 if(element.isDisplayed()){
-                    System.out.println("Element Found");
                     break;
                 }
             }catch (Exception e){
@@ -71,7 +70,7 @@ public class AppPage {
 
     public void scrollToElement(String elementText){
         try{
-            driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text("+elementText+"))"));
+            driver.findElement(new MobileBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().text(\""+elementText+"\"))"));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
